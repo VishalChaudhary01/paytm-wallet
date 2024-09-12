@@ -1,10 +1,12 @@
-import { Button } from "@repo/ui/button";
+"use client"
 
-export default function Home() {
+import { useBalance } from "@repo/store/useBalance";
+
+export default function() {
+  const balance = useBalance();
   return (
-    <div className="text-3xl font-bold">
-      Hi There, from user-app
-      <Button appName="Button">Button</Button>
+    <div>
+      Hi There {balance}
     </div>
-  );
+  )
 }
