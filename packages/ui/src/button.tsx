@@ -3,14 +3,15 @@
 import { ReactNode } from "react";
 
 interface ButtonProps {
+  type?: "submit" | "reset" | "button";
+  onClick?: () => void;
   children: ReactNode;
   className?: string;
-  appName: string;
 }
 
-export const Button = ({ children, className, appName }: ButtonProps) => {
+export const Button = ({ children, className, type, onClick }: ButtonProps) => {
   return (
-    <button className="bg-blue-400 px-3 py-1 rounded-md text-xl">
+    <button onClick={onClick} type={type || "button"} className={`border rounded-full px-4 py-2 w-full text-base font-medium ${className}`}>
       {children}
     </button>
   );

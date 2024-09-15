@@ -6,7 +6,22 @@ module.exports = {
     "../../packages/ui/src/**/*.{js,ts,jsx,tsx,mdx}"
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        blue: "#1a8cff",
+        gray: {
+          1: "#535353",
+          2: "#4b4b4b"
+        }
+      },
+      backgroundColor: {
+        blue: {
+          1: "#0074DE",
+          2: "#0066cc"
+        }
+      }
+      
+    },
   },
   plugins: [],
 }
