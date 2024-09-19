@@ -5,7 +5,7 @@ import { useRef } from "react";
 import { toast } from "sonner";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
-import { signup } from "../app/actions/signup";
+import { signup } from "../actions/signup";
 
 export function SignupForm() {
      const router = useRouter();

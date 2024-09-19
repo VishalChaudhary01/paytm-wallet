@@ -1,7 +1,7 @@
 import { getServerSession } from "next-auth";
-import { SignupForm } from "../../../components/SignupForm";
 import { redirect } from "next/navigation";
 import { authOptions } from "../../lib/auth";
+import { SignupForm } from "@/components/SignupForm";
 
 export default async function Signup() {
      const session = await getServerSession(authOptions);
