@@ -8,12 +8,12 @@ datasource db {
 }
 
 model User {
-  id       Int    @id @default(autoincrement())
-  name     String
-  number   Int @unique
-  password String
+  id                Int                 @id @default(autoincrement())
+  name              String
+  number            Int                 @unique
+  password          String
   OnRampTransaction OnRampTransaction[]
-  Balance   Balance[]
+  Balance           Balance[]
 }
 
 model Merchent {
