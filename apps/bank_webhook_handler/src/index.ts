@@ -20,17 +20,22 @@ app.post("/hdfcWebhook", async (req: Request, res: Response) => {
      }
      try {
           await prisma.$transaction([
-               prisma.balance.updateMany({
+               prisma.balance.upsert({
                     where: {
                          userId: Number(paymentInformation.userId)
                     },
-                    data: {
+                    update: {
                          amount: {
                               increment: Number(paymentInformation.amount)
                          }
+                    },
+                    create: {
+                         userId: Number(paymentInformation.userId),
+                         amount: Number(paymentInformation.amount),
+                         locked: 0,
                     }
                }),
-               prisma.onRampTransaction.updateMany({
+               prisma.onRampTransaction.update({
                     where: {
                          token: paymentInformation.token
                     },

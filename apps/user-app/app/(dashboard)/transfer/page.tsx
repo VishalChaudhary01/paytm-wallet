@@ -40,14 +40,16 @@ export default async function Transfer() {
      return (
           <div className="w-full">
                <div className="text-3xl font-bold text-gray-2 p-4">
-                    Trasnfer
+                    Transfer
                </div>
-               <div className="grid grid-cols-1 gap-4 md:grid-cols-2 p-4">
-                    <div>
+               <div className="flex flex-col lg:flex-row gap-8 justify-center items-center lg:items-start p-4">
+                    <div className="w-96">
                          <AddMoney />
                     </div>
-                    <div className="flex flex-col gap-4">
-                         <Balance amount={balance.amount} locked={balance.locked} />
+                    <div className="w-96">
+                         <div className="pb-4">
+                              <Balance amount={balance.amount} locked={balance.locked} />
+                         </div>
                          <OnRampTransactions transactions={transactions} />
                     </div>
                </div>

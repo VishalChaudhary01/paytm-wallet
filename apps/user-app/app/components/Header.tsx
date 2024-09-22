@@ -9,7 +9,7 @@ import { Sidebar } from "./Sidebar";
 export function Header() {
      const [openSidebar, setOpenSidebar] = useState(false);
      return (
-          <div className="sticky top-0 flex justify-between items-center w-full px-8 py-2 bg-blue-3">
+          <div className="flex justify-between items-center w-full px-8 py-2 bg-blue-3">
                <div className="flex gap-4">
                     <div className="flex lg:hidden md:hidden">
                          <button onClick={() => setOpenSidebar(true)}>
