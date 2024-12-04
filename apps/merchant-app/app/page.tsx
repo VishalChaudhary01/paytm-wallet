@@ -5,6 +5,9 @@ export default function Home() {
     <div className="text-2xl font-semibold">
       Welcome to merchant app,
       <p>this is merchent app</p>
+    
+
+    
       <Button>Click me</Button>
     </div>
   );
